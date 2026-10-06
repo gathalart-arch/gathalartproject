@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinda Meilia Rhepon | Industrial Engineering & Supply Chain Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        corporate: {
+                            50: '#f0f6ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc5fb',
+                            400: '#35aaf6',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        slateblue: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            600: '#475569',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 50%, #35aaf6 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px -5px rgba(2, 132, 199, 0.15), 0 8px 10px -6px rgba(2, 132, 199, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slateblue-50 text-slateblue-800 font-sans antialiased selection:bg-corporate-500 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-corporate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-corporate-700 to-corporate-500 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                        DM
+                    </div>
+                    <div>
+                        <span class="block font-bold text-slateblue-900 text-lg leading-tight">Dinda Meilia Rhepon</span>
+                        <span class="block text-xs font-medium text-corporate-600 tracking-wide uppercase">Industrial Engineer</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-slateblue-600 hover:text-corporate-600 transition-colors">About</a>
+                    <a href="#education" class="text-slateblue-600 hover:text-corporate-600 transition-colors">Education</a>
+                    <a href="#experience" class="text-slateblue-600 hover:text-corporate-600 transition-colors">Experience</a>
+                    <a href="#leadership" class="text-slateblue-600 hover:text-corporate-600 transition-colors">Leadership</a>
+                    <a href="#achievements" class="text-slateblue-600 hover:text-corporate-600 transition-colors">Achievements</a>
+                    <a href="#skills" class="text-slateblue-600 hover:text-corporate-600 transition-colors">Skills</a>
+                    <a href="#contact" class="px-4 py-2 rounded-lg bg-corporate-600 text-white font-semibold hover:bg-corporate-700 transition-all shadow-sm">Contact Me</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="p-2 rounded-lg text-slateblue-800 hover:bg-corporate-100 focus:outline-none transition-colors" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-corporate-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slateblue-800 hover:bg-corporate-50 hover:text-corporate-600">About</a>
+            <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-slateblue-800 hover:bg-corporate-50 hover:text-corporate-600">Education</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slateblue-800 hover:bg-corporate-50 hover:text-corporate-600">Experience</a>
+            <a href="#leadership" class="block px-3 py-2 rounded-md text-base font-medium text-slateblue-800 hover:bg-corporate-50 hover:text-corporate-600">Leadership</a>
+            <a href="#achievements" class="block px-3 py-2 rounded-md text-base font-medium text-slateblue-800 hover:bg-corporate-50 hover:text-corporate-600">Achievements</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-slateblue-800 hover:bg-corporate-50 hover:text-corporate-600">Skills</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-semibold bg-corporate-600 text-white text-center rounded-lg">Contact Me</a>
+        </div>
+    </header>
+
+    <section class="relative hero-gradient text-white pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-corporate-100 text-xs sm:text-sm font-medium mb-6 border border-white/20">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Industrial Engineering Graduate | UII (GPA 3.82 Cum Laude)</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Dinda Meilia Rhepon
+                </h1>
+                <p class="text-lg sm:text-xl text-corporate-100 font-medium mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Supply Chain & Operations Enthusiast | Passionate about demand planning, operational optimization, manufacturing systems, and data-driven continuous improvement.
+                </p>
+
+                <!-- Contact Badges -->
+                <div class="flex flex-wrap justify-center gap-4 text-sm mb-10 text-corporate-100">
+                    <div class="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+                        <i class="fa-solid fa-location-dot text-corporate-300"></i>
+                        <span>Yogyakarta, Indonesia</span>
+                    </div>
+                    <a href="mailto:dindaarhpn@gmail.com" class="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all">
+                        <i class="fa-solid fa-envelope text-corporate-300"></i>
+                        <span>dindaarhpn@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dindameiliarhepon" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all">
+                        <i class="fa-brands fa-linkedin text-corporate-300"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                    <a href="tel:+6282186810788" class="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all">
+                        <i class="fa-solid fa-phone text-corporate-300"></i>
+                        <span>+62 821-8681-0788</span>
+                    </a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-corporate-800 font-bold hover:bg-corporate-50 transition-all shadow-lg hover:shadow-xl">
+                        <i class="fa-solid fa-paper-plane mr-2 text-corporate-600"></i> Get in Touch
+                    </a>
+                    <button onclick="downloadCV()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-corporate-700/80 hover:bg-corporate-700 text-white font-bold border border-white/30 backdrop-blur-sm transition-all shadow-lg">
+                        <i class="fa-solid fa-download mr-2"></i> Download CV Summary
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-corporate-600 mb-3">Professional Profile</h2>
+                <h3 class="text-3xl font-bold text-slateblue-900">About Me</h3>
+                <div class="w-16 h-1 bg-corporate-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+                <div class="md:col-span-1 bg-corporate-50 p-8 rounded-2xl border border-corporate-100 shadow-sm text-center">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-corporate-600 to-corporate-800 flex items-center justify-center text-white text-3xl font-extrabold shadow-md">
+                        3.82
+                    </div>
+                    <h4 class="font-bold text-slateblue-900 text-lg mb-1">GPA 3.82 / 4.00</h4>
+                    <p class="text-corporate-700 font-medium text-sm mb-4">Cum Laude Distinction</p>
+                    <p class="text-slateblue-600 text-xs leading-relaxed">Universitas Islam Indonesia (UII) Bachelor of Engineering in Industrial Engineering.</p>
+                </div>
+
+                <div class="md:col-span-2 space-y-6 text-slateblue-600 leading-relaxed">
+                    <p class="text-lg font-medium text-slateblue-800">
+                        Industrial Engineering graduate from Universitas Islam Indonesia with a strong interest in supply chain management, demand and production planning, inventory management, and operational improvement.
+                    </p>
+                    <p>
+                        Experienced in data analysis, operational planning, dashboard development, and project-based activities, with solid academic exposure to supply chain optimization, Material Requirements Planning (MRP), Enterprise Resource Planning (ERP), and Business Intelligence tools.
+                    </p>
+                    <p>
+                        Equipped with analytical thinking, problem-solving, adaptability, and strong coordination skills, dedicated to optimizing supply chain processes and ensuring efficient operations to support organizational goals and customer needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 bg-slateblue-50 border-t border-corporate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-corporate-600 mb-3">Academic Background</h2>
+                <h3 class="text-3xl font-bold text-slateblue-900">Education & Thesis</h3>
+                <div class="w-16 h-1 bg-corporate-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-corporate-100 p-6 sm:p-10 card-hover">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 border-b border-slateblue-100 pb-6">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-corporate-100 text-corporate-800 text-xs font-bold rounded-full mb-3">Sep 2022 – June 2026</span>
+                        <h4 class="text-2xl font-bold text-slateblue-900">Bachelor of Engineering in Industrial Engineering</h4>
+                        <p class="text-corporate-700 font-semibold mt-1">Universitas Islam Indonesia (UII) | Yogyakarta, Indonesia</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 bg-corporate-50 px-4 py-2 rounded-xl text-center border border-corporate-100">
+                        <span class="block text-xs text-slateblue-600 font-medium">GPA</span>
+                        <span class="text-xl font-extrabold text-corporate-700">3.82 <span class="text-xs font-normal text-slateblue-600">/ 4.00</span></span>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h5 class="font-bold text-slateblue-900 mb-2 flex items-center">
+                            <i class="fa-solid fa-graduation-cap text-corporate-600 mr-2"></i> Undergraduate Thesis
+                        </h5>
+                        <div class="bg-corporate-50/60 p-4 rounded-xl border border-corporate-100">
+                            <p class="font-semibold text-slateblue-800 text-sm mb-1">"Optimization of Material Requirements Planning in a Hybrid Make-to-Stock and Make-to-Order Production System with Limited Capacity Considerations Using an Evolutionary Algorithm (Case Study: Electronic Control Module)"</p>
+                            <p class="text-xs text-slateblue-600">Analyzed and developed an optimization framework to balance hybrid production environments and limited manufacturing capacities effectively.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 class="font-bold text-slateblue-900 mb-3 flex items-center">
+                            <i class="fa-solid fa-book-open text-corporate-600 mr-2"></i> Relevant Coursework
+                        </h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Production Planning & Inventory Control</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Operations Management</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Manufacturing Systems</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Inventory Management</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Lean Manufacturing</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Operational Monitoring</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Project Management</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Engineering Optimization</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Supply Chain Optimization</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Data Analytics</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Business Intelligence (BI)</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Financial & Cost Analysis</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Procurement and Material</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slateblue-100/70 text-slateblue-800 text-xs font-medium">Enterprise Resource Planning (ERP)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-corporate-600 mb-3">Career History</h2>
+                <h3 class="text-3xl font-bold text-slateblue-900">Professional Experience</h3>
+                <div class="w-16 h-1 bg-corporate-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Experience 1 -->
+                <div class="bg-slateblue-50/50 p-6 sm:p-8 rounded-2xl border border-corporate-100 card-hover">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                        <div>
+                            <span class="px-3 py-1 bg-corporate-100 text-corporate-800 text-xs font-bold rounded-full mb-2 inline-block">May – August 2026</span>
+                            <h4 class="text-xl font-bold text-slateblue-900">Technical and Budgeting Department Intern</h4>
+                            <p class="text-corporate-700 font-semibold text-sm">PT Pertamina Gas Operation East Java Area | Surabaya, Indonesia</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-slateblue-600 text-sm leading-relaxed mt-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-corporate-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Conducted data collection, verification, and documentation of company asset inventories to support accurate and organized asset and inventory management.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-corporate-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Developed a web-based dashboard to integrate and improve monitoring and tracking of procurement activities, supporting more efficient operational information management.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-corporate-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Consolidated material, procurement, and asset-related information from multiple sources to improve data accessibility, monitoring, and operational coordination.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="bg-slateblue-50/50 p-6 sm:p-8 rounded-2xl border border-corporate-100 card-hover">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                        <div>
+                            <span class="px-3 py-1 bg-corporate-100 text-corporate-800 text-xs font-bold rounded-full mb-2 inline-block">March 2025 – February 2026</span>
+                            <h4 class="text-xl font-bold text-slateblue-900">Head of Academic Operation Department</h4>
+                            <p class="text-corporate-700 font-semibold text-sm">Integrated Manufacturing System Laboratory, UII | Yogyakarta, Indonesia</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-slateblue-600 text-sm leading-relaxed mt-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-corporate-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Planned and managed the end-to-end implementation of laboratory operations, including practicum planning, learning module development, instructional materials, and session scheduling.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-corporate-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Delivered practicum sessions, evaluated student assignments and performance, managed grading processes, and coordinated directly with lecturers to ensure alignment with course learning objectives.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="bg-slateblue-50/50 p-6 sm:p-8 rounded-2xl border border-corporate-100 card-hover">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                        <div>
+                            <span class="px-3 py-1 bg-corporate-100 text-corporate-800 text-xs font-bold rounded-full mb-2 inline-block">March – April 2025</span>
+                            <h4 class="text-xl font-bold text-slateblue-900">Mechanical Department Intern</h4>
+                            <p class="text-corporate-700 font-semibold text-sm">PT New Sentosa International | Magelang, Indonesia</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-slateblue-600 text-sm leading-relaxed mt-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-corporate-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Conducted an occupational health and safety risk assessment using the HIRARC method to identify workplace hazards and evaluate associated risk levels within the Mechanical Department.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-corporate-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Analyzed identified risks and developed improvement recommendations to support risk mitigation, workplace safety, and operational reliability.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="py-20 bg-slateblue-50 border-t border-corporate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-corporate-600 mb-3">Community & Governance</h2>
+                <h3 class="text-3xl font-bold text-slateblue-900">Leadership & Organizations</h3>
+                <div class="w-16 h-1 bg-corporate-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Org 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-corporate-600 bg-corporate-50 px-2.5 py-1 rounded-md">Feb 2026 – Present</span>
+                        <h4 class="font-bold text-slateblue-900 text-lg mt-3">Project Management Institute Indonesia Chapter</h4>
+                        <p class="text-xs font-semibold text-corporate-700 mt-1">Member of Yogyakarta Branch</p>
+                        <p class="text-slateblue-600 text-xs mt-3 leading-relaxed">Organized professional webinars and developed study group programs to support certification preparations.</p>
+                    </div>
+                </div>
+
+                <!-- Org 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-corporate-600 bg-corporate-50 px-2.5 py-1 rounded-md">July 2024 – May 2026</span>
+                        <h4 class="font-bold text-slateblue-900 text-lg mt-3">Marketing and Communication FTI UII</h4>
+                        <p class="text-xs font-semibold text-corporate-700 mt-1">Staff of Event Planner Department</p>
+                        <p class="text-slateblue-600 text-xs mt-3 leading-relaxed">Coordinated faculty exhibitions, promotional events, university visits, and served as Master of Ceremony.</p>
+                    </div>
+                </div>
+
+                <!-- Org 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-corporate-600 bg-corporate-50 px-2.5 py-1 rounded-md">Oct 2025 – May 2026</span>
+                        <h4 class="font-bold text-slateblue-900 text-lg mt-3">TEDxUII</h4>
+                        <p class="text-xs font-semibold text-corporate-700 mt-1">Secretary</p>
+                        <p class="text-slateblue-600 text-xs mt-3 leading-relaxed">Managed administrative workflows, documentation, correspondence, and cross-division preparation tracking.</p>
+                    </div>
+                </div>
+
+                <!-- Org 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-corporate-600 bg-corporate-50 px-2.5 py-1 rounded-md">Dec 2024 – June 2025</span>
+                        <h4 class="font-bold text-slateblue-900 text-lg mt-3">Project Management Challenge Committee</h4>
+                        <p class="text-xs font-semibold text-corporate-700 mt-1">Coordinator of Event Division</p>
+                        <p class="text-slateblue-600 text-xs mt-3 leading-relaxed">Facilitated communication between competition participants and organizers for smooth execution.</p>
+                    </div>
+                </div>
+
+                <!-- Org 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-corporate-600 bg-corporate-50 px-2.5 py-1 rounded-md">Aug – Sept 2024</span>
+                        <h4 class="font-bold text-slateblue-900 text-lg mt-3">Project Management Challenge Committee (Malang)</h4>
+                        <p class="text-xs font-semibold text-corporate-700 mt-1">Liaison Officer</p>
+                        <p class="text-slateblue-600 text-xs mt-3 leading-relaxed">Assisted competition participants and served as the direct bridge to ensure seamless coordination.</p>
+                    </div>
+                </div>
+
+                <!-- Org 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-corporate-600 bg-corporate-50 px-2.5 py-1 rounded-md">May – Sept 2023</span>
+                        <h4 class="font-bold text-slateblue-900 text-lg mt-3">Pesona Taaruf Committee</h4>
+                        <p class="text-xs font-semibold text-corporate-700 mt-1">Staff of Event Division</p>
+                        <p class="text-slateblue-600 text-xs mt-3 leading-relaxed">Contributed to event concept development, rundowns, technical guidelines, and guest coordination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-corporate-600 mb-3">Milestones & Recognition</h2>
+                <h3 class="text-3xl font-bold text-slateblue-900">Achievements & Academic Projects</h3>
+                <div class="w-16 h-1 bg-corporate-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Achievement 1 -->
+                <div class="bg-corporate-50/50 p-6 sm:p-8 rounded-2xl border border-corporate-100 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-corporate-600 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-corporate-700">International Scale Finalist</span>
+                        <h4 class="text-lg font-bold text-slateblue-900 mt-1">Oil Rig Design Competition - OCEANO by ITS (2024)</h4>
+                        <p class="text-sm font-semibold text-corporate-800 mt-1">Awarded as Favorite Winner & Top 7 Finalist</p>
+                        <p class="text-xs text-slateblue-600 mt-2 leading-relaxed">Designed and developed an oil rig scale model capable of lifting and supporting a 250 kg load, demonstrating structural design and mechanical performance.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="bg-corporate-50/50 p-6 sm:p-8 rounded-2xl border border-corporate-100 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-corporate-600 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-corporate-700">International Scale Finalist</span>
+                        <h4 class="text-lg font-bold text-slateblue-900 mt-1">Oil Rig Design Competition - PROTECT (2025)</h4>
+                        <p class="text-sm font-semibold text-corporate-800 mt-1">Top 7 Finalist (Pertamina University)</p>
+                        <p class="text-xs text-slateblue-600 mt-2 leading-relaxed">Designed a lightweight oil rig scale model capable of supporting 256 kg, focusing on structural efficiency and load-bearing performance.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="bg-corporate-50/50 p-6 sm:p-8 rounded-2xl border border-corporate-100 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-corporate-600 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-corporate-700">PT Pertamina Gas Project</span>
+                        <h4 class="text-lg font-bold text-slateblue-900 mt-1">Technical Dashboard Development (2026)</h4>
+                        <p class="text-sm font-semibold text-corporate-800 mt-1">East Java Area</p>
+                        <p class="text-xs text-slateblue-600 mt-2 leading-relaxed">Developed a web-based dashboard to support monitoring and integration of procurement and asset processes within the Technical function.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="bg-corporate-50/50 p-6 sm:p-8 rounded-2xl border border-corporate-100 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-corporate-600 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-corporate-700">Undergraduate Research</span>
+                        <h4 class="text-lg font-bold text-slateblue-900 mt-1">Optimization of MRP (2026)</h4>
+                        <p class="text-sm font-semibold text-corporate-800 mt-1">Hybrid Make-to-Stock / Order Systems</p>
+                        <p class="text-xs text-slateblue-600 mt-2 leading-relaxed">Analyzed Material Requirements Planning under limited production capacity using evolutionary algorithms for Electronic Control Modules.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slateblue-50 border-t border-corporate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-corporate-600 mb-3">Expertise & Credentials</h2>
+                <h3 class="text-3xl font-bold text-slateblue-900">Skills & Certifications</h3>
+                <div class="w-16 h-1 bg-corporate-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <!-- Technical Skills -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-corporate-100 text-corporate-700 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h4 class="font-bold text-slateblue-900">Technical Skills</h4>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slateblue-600">
+                        <li><strong class="text-slateblue-800">Ms. Excel:</strong> Advanced (Pivot Tables, VLOOKUP, Data Modeling)</li>
+                        <li><strong class="text-slateblue-800">Business Intelligence (BI) Tools</strong></li>
+                        <li><strong class="text-slateblue-800">Enterprise Resource Planning (ERP)</strong></li>
+                        <li><strong class="text-slateblue-800">SolidWorks:</strong> Advanced Design</li>
+                        <li><strong class="text-slateblue-800">AutoCAD & SketchUp</strong></li>
+                        <li><strong class="text-slateblue-800">Google Workspace & Trello</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Core Competencies -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-corporate-100 text-corporate-700 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h4 class="font-bold text-slateblue-900">Core Competencies</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 bg-corporate-50 text-corporate-800 rounded text-xs font-medium">Data Analytics</span>
+                        <span class="px-2.5 py-1 bg-corporate-50 text-corporate-800 rounded text-xs font-medium">Business Intelligence</span>
+                        <span class="px-2.5 py-1 bg-corporate-50 text-corporate-800 rounded text-xs font-medium">Decision-Making</span>
+                        <span class="px-2.5 py-1 bg-corporate-50 text-corporate-800 rounded text-xs font-medium">Project Management</span>
+                        <span class="px-2.5 py-1 bg-corporate-50 text-corporate-800 rounded text-xs font-medium">Supply Chain Optimization</span>
+                        <span class="px-2.5 py-1 bg-corporate-50 text-corporate-800 rounded text-xs font-medium">Lean Manufacturing</span>
+                        <span class="px-2.5 py-1 bg-corporate-50 text-corporate-800 rounded text-xs font-medium">Operational Efficiency</span>
+                        <span class="px-2.5 py-1 bg-corporate-50 text-corporate-800 rounded text-xs font-medium">Risk Assessment</span>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-corporate-100 text-corporate-700 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h4 class="font-bold text-slateblue-900">Certifications</h4>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slateblue-600">
+                        <li><strong class="text-slateblue-800">CAPM</strong> (Certified Associate in Project Management) - Apr 2026</li>
+                        <li><strong class="text-slateblue-800">CEPT</strong> (Score: 501) - Apr 2026</li>
+                        <li><strong class="text-slateblue-800">Certified HSE Officer</strong> (BNSP) - Dec 2025</li>
+                        <li><strong class="text-slateblue-800">Dobot MG400 & Magician E6</strong> - Jan 2025</li>
+                        <li><strong class="text-slateblue-800">Introduction to SAP S/4HANA</strong> - Jan 2025</li>
+                    </ul>
+                </div>
+
+                <!-- Languages -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-corporate-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-corporate-100 text-corporate-700 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h4 class="font-bold text-slateblue-900">Languages</h4>
+                    </div>
+                    <ul class="space-y-3 text-xs text-slateblue-600">
+                        <li>
+                            <div class="flex justify-between font-semibold text-slateblue-800 mb-1">
+                                <span>Bahasa Indonesia</span>
+                                <span>Native</span>
+                            </div>
+                            <div class="w-full bg-slateblue-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-corporate-600 h-full w-full rounded-full"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between font-semibold text-slateblue-800 mb-1">
+                                <span>English</span>
+                                <span>Professional</span>
+                            </div>
+                            <div class="w-full bg-slateblue-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-corporate-600 h-full w-4/5 rounded-full"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-corporate-600 mb-3">Get In Touch</h2>
+                <h3 class="text-3xl font-bold text-slateblue-900">Let's Connect</h3>
+                <div class="w-16 h-1 bg-corporate-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slateblue-600 mt-4 text-sm">Open to professional opportunities in Supply Chain, Operations Planning, and Industrial Engineering.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Contact Cards -->
+                <div class="space-y-4">
+                    <a href="mailto:dindaarhpn@gmail.com" class="flex items-center p-4 rounded-2xl bg-slateblue-50 border border-corporate-100 hover:bg-corporate-50 transition-all card-hover">
+                        <div class="w-12 h-12 rounded-xl bg-corporate-600 text-white flex items-center justify-center text-lg mr-4">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-medium text-slateblue-600">Email Me</span>
+                            <span class="font-bold text-slateblue-900 text-sm">dindaarhpn@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="tel:+6282186810788" class="flex items-center p-4 rounded-2xl bg-slateblue-50 border border-corporate-100 hover:bg-corporate-50 transition-all card-hover">
+                        <div class="w-12 h-12 rounded-xl bg-corporate-600 text-white flex items-center justify-center text-lg mr-4">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-medium text-slateblue-600">Call / WhatsApp</span>
+                            <span class="font-bold text-slateblue-900 text-sm">+62 821-8681-0788</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/dindameiliarhepon" target="_blank" rel="noopener noreferrer" class="flex items-center p-4 rounded-2xl bg-slateblue-50 border border-corporate-100 hover:bg-corporate-50 transition-all card-hover">
+                        <div class="w-12 h-12 rounded-xl bg-corporate-600 text-white flex items-center justify-center text-lg mr-4">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-medium text-slateblue-600">LinkedIn</span>
+                            <span class="font-bold text-slateblue-900 text-sm">dindameiliarhepon</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 bg-slateblue-50/50 p-8 rounded-2xl border border-corporate-100">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slateblue-800 uppercase mb-1">Your Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slateblue-200 focus:ring-2 focus:ring-corporate-500 focus:border-corporate-500 bg-white text-sm outline-none transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slateblue-800 uppercase mb-1">Your Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slateblue-200 focus:ring-2 focus:ring-corporate-500 focus:border-corporate-500 bg-white text-sm outline-none transition-all" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slateblue-800 uppercase mb-1">Subject</label>
+                            <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl border border-slateblue-200 focus:ring-2 focus:ring-corporate-500 focus:border-corporate-500 bg-white text-sm outline-none transition-all" placeholder="Job Opportunity / Inquiry">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slateblue-800 uppercase mb-1">Message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slateblue-200 focus:ring-2 focus:ring-corporate-500 focus:border-corporate-500 bg-white text-sm outline-none transition-all" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-corporate-600 hover:bg-corporate-700 text-white font-bold transition-all shadow-md">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-center text-sm font-medium">
+                        Thank you! Your message has been prepared to send or copied to your email client.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slateblue-900 text-corporate-100 py-12 border-t border-slateblue-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-sm">
+            <div class="mb-4 sm:mb-0 text-center sm:text-left">
+                <p class="font-bold text-white text-base">Dinda Meilia Rhepon</p>
+                <p class="text-xs text-corporate-300 mt-1">Industrial Engineering Graduate | Yogyakarta, Indonesia</p>
+            </div>
+            <p class="text-xs text-corporate-300 text-center sm:text-right">
+                &copy; 2026 Dinda Meilia Rhepon. Built for GitHub Pages. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Download CV simulation
+        function downloadCV() {
+            const cvContent = `DINDA MEILIA RHEPON\nYogyakarta, Indonesia | +6282186810788 | dindaarhpn@gmail.com\nLinkedIn: www.linkedin.com/in/dindameiliarhepon\n\nEDUCATION:\nUniversitas Islam Indonesia - Bachelor of Engineering in Industrial Engineering (GPA: 3.82/4.00, Cum Laude)\n\nEXPERIENCE:\n- Technical and Budgeting Dept Intern at PT Pertamina Gas Operation East Java Area\n- Head of Academic Operation Dept at Integrated Manufacturing System Laboratory, UII\n- Mechanical Department Intern at PT New Sentosa International\n\nSKILLS:\nMs. Excel, Business Intelligence, ERP, SolidWorks, Supply Chain Optimization, Project Management.`;
+            
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Dinda_Meilia_Rhepon_CV.txt';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+
+        // Contact form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            window.location.href = `mailto:dindaarhpn@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message)}`;
+            
+            document.getElementById('form-success').classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</body>
+</html>
